@@ -1,0 +1,11 @@
+cmake_minimum_required(VERSION 3.13)
+project(LLFS)
+set(C_STANDARD 11)
+
+set(TEST 1)
+
+FILE(GLOB IO_SOURCE_FILES ./io/*.c)
+FILE(GLOB DISK_SOURCE_FILES ./disk/*.c)
+FILE(GLOB APP_SOURCE_FILES ./apps/*.c)
+
+add_executable(LLFS ${IO_SOURCE_FILES} ${DISK_SOURCE_FILES} ${APP_SOURCE_FILES} )
